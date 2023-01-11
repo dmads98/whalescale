@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "~=3.1.0"
+openpyxl = "*"
+django-heroku = "*"
+gunicorn = "*"
+npm = "*"
+django-storages = "*"
+boto3 = "*"
+psycopg2 = "*"
+pillow = "*"
+django-nose = "*"
+coverage = "*"
+packaging = "*"
+djangorestframework = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+django-cors-headers = "*"
+numpy = "*"
+
+[requires]
+python_version = "3.8"
