@@ -1,0 +1,11 @@
+In addition to our code's comments, this documentation serves to onboard incoming programmers to the technical decisions and design of the WhaleScale application for further implementation.
+
+# Generic Architecture Design
+
+Our application employs a Vercel-deployed front end and a Heroku-hosted back end. The front end is coded entirely in Javascript, html, and CSS, and uses the React Javascript library. Individual features are called from the Material-UI library. This front end application is what faces the users.
+
+The backend is hosted on Heroku and uses a Django Rest Framework. Json files are passed by axios from back to front from CRUD requests. Heroku passes CRUD operations back to the Heroku Database, and any saved or deleted images are stored using the Simple Storage Service (S3). Math APIs are called from front to back whenever any calculation is called for. Any calculation is made asynchronously to improve runtime. 
+
+The front end uses React because it means that any number of users can make any number of calls without interruption. Within the main front end repo, constants, indexes, and our main App file act as controllers for the client-facing features. Other components are stored within the components folder, where they are further divided between the canvas components (the canvas folder), the dashboard components (db_components), and the essential navigation features, which populate the components folder. The canvas folder is governed by the Canvas javascript folder, which makes subsequent calls to the objects or its own handler depending on the user's input.  The essential navigation features are packaged in appropriately named files, such as Button, Dashboard, FileDrop, Navbar, Register, Results, etc. These files are contained but flexible, as they are designed to be able to be edited without impairing the function of the application as a whole.
+
+The backend structure uses a PostgreSQl databaste. Authentification info is stored in settings.py. All postgreSQl database models are stored in models.py. All tests are stored in tests.py, and all backend logic is stored in views.py. Website routes are configured in urls.py. In general, the backend uses Python whereas the front end uses Javascript.
