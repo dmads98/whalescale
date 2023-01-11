@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    Welcome to the WhaleScale Homepage!
+</head>
+<body>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Auto width -->
+<form action="export" method="post">
+    {% csrf_token %}
+    <button class="btn" type="submit" ><i class="fa fa-download"></i> Download</button>
+</form>
+
+</body>
+</html>
